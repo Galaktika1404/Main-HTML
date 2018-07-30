@@ -1,6 +1,10 @@
 function toInput(id) {
     let value = document.getElementById(id).value;
-    document.getElementById('result').value += value;
+   write(value);
+}
+
+function write (symbol) {
+    document.getElementById('result').value += symbol;
 }
 
 function subtract(){
@@ -10,5 +14,5 @@ function subtract(){
 }
 
 function clearValue() {
-    document.getElementById('result').value = '';
+    write('');
 }
