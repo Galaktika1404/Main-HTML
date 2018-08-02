@@ -29,15 +29,44 @@ function divide() {
     console.log(p1);
     console.log(operation);
 }
+  function addNum (){
+      p1 = document.getElementById('result').value;
+      clearValue();
+      operation = "+";
+
+  }
+function multiply (){
+    p1 = document.getElementById('result').value;
+    clearValue();
+    operation = "*";
+
+}
 
 function getResult() {
 
     let itogo;
     p2 = document.getElementById('result').value;
-    console.log(p2);
-    if (operation ==="/"){
-    itogo = p1 / p2;}
-//itogo = p1 - p2;
+
+// logika
+    if (operation === "/") {
+        itogo = p1 / p2;
+    }
+    else if (operation === "+") {
+        itogo = Number(p1) + Number(p2);
+
+    }
+    else if (operation === "-") {
+        itogo = p1 - p2;
+    }
+    else if(operation === "*" ) {
+        itogo = p1 * p2;
+        }
+
+    // end logika
+
+
     clearValue();
     write(itogo);
+
 }
+
