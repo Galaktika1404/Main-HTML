@@ -4,32 +4,182 @@
     <meta charset="UTF-8">
     <title>JS1 HTML</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <style>
+
+        table {
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 8px;
+            background-color: #2c2c2c;
+            box-shadow: 0 2px #999;
+            border-radius: 8px;
+
+        }
+
+        input[type=text] {
+            width: 270px;
+            padding: 10px 10px;
+            box-sizing: border-box;
+            font-size:32px;
+        }
+
+        .buttonAll {
+            background-color: #555555;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size:24px;
+            border-radius: 8px;
+            box-shadow: 0 2px #999;
+            outline: none;
+        }
+
+        .buttonAll:active {
+            box-shadow: 0 1px #666;
+            transform: translateY(
+                    3px);
+        }
+
+        .buttonC {
+            background-color: #f44336;
+            border: none;
+            color: white;
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size:24px;
+            box-shadow: 0 2px #ff7b80;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .buttonC:active {
+            box-shadow: 0 1px #f60002;
+            transform: translateY(2px);
+        }
+
+        .buttonZnak {
+            background-color: #e7e7e7;
+            border: none;
+            color: black;
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size:24px;
+            border-radius: 8px;
+            box-shadow: 0 2px #f8f8f8;
+            outline: none;
+        }
+
+        .buttonZnak:active {
+            box-shadow: 0 1px #666;
+            transform: translateY(
+                    3px);
+        }
+
+        .buttonRavno {
+            padding: 145% 16px;
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size:24px;
+            box-shadow: 0 2px #999;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .buttonRavno:active {
+            box-shadow: 0 0px #666;
+            transform: translateY(2px);
+        }
+
+
+    </style>
 </head>
 <body>
 <h1>Gala project</h1>
-<input type="text" id="result">
-<hr>
-<button class="button" id="0" value="0" onclick="toInput('0')">0</button>
-<button class="button" id="1" value="1" onclick="toInput('1')">1</button>
-<button class="button" id="2" value="2" onclick="toInput('2')">2</button>
-<button class="button" id="3" value="3" onclick="toInput('3')">3</button>
-<button class="button" id="4" value="4" onclick="toInput('4')">4</button>
-<button class="button" id="5" value="5" onclick="toInput('5')">5</button>
-<button class="button" id="6" value="6" onclick="toInput('6')">6</button>
-<button class="button" id="7" value="7" onclick="toInput('7')">7</button>
-<button class="button" id="8" value="8" onclick="toInput('8')">8</button>
-<button class="button" id="9" value="9" onclick="toInput('9')">9</button>
-<button class="button" id="." value="." onclick="toInput('.')">.</button>
-<hr>
-<button class="button" onclick="addNum()">+</button>
-<button class="button" onclick="subtract()">-</button>
-<button class="button" onclick="multiply()">*</button>
-<button class="button" onclick="divide()">/</button>
-<button class="button" onclick="getResult()">=</button>
-<hr>
-<button class="button" onclick="clearValue()">C</button>
-<hr>
-<br>
+<table>
+    <tr>
+        <td colspan="4">
+            <input type="text" id="result" size="12"><hr>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="buttonC" onclick="clearValue()">C</button>
+        </td>
+        <td>
+            <button class="buttonZnak" onclick=" divide()">/</button>
+        </td>
+        <td>
+            <button class="buttonZnak" onclick=" multiply()">*</button>
+        </td>
+        <td>
+            <button class="buttonZnak" onclick=" addNum()">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="buttonAll" id="7" value="7" onclick="toInput('7')">7</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="8" value="8" onclick="toInput('8')">8</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="9" value="9" onclick="toInput('9')">9</button>
+        </td>
+        <td>
+            <button class="buttonZnak" onclick="subtract()">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="buttonAll" id="4" value="4" onclick="toInput('4')">4</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="5" value="5" onclick="toInput('5')">5</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="6" value="6" onclick="toInput('6')">6</button>
+        </td>
+        <td rowspan="3">
+            <button class="buttonRavno" onclick="getResult()">=</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="buttonAll" id="1" value="1" onclick="toInput('1')">1</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="2" value="2" onclick="toInput('2')">2</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="3" value="3" onclick="toInput('3')">3</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="buttonAll" id="0" value="0" onclick="toInput('0')">0</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="00" value="00" onclick="toInput('00')">00</button>
+        </td>
+        <td>
+            <button class="buttonAll" id="." value="." onclick="toInput('.')">.</button>
+        </td>
+    </tr>
+
+
+</table>
+
 <script type class="application/javascript" src="script.js"></script>
 </body>
 </html>
