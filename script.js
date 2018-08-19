@@ -64,7 +64,6 @@ function getResult() {
 
     // end logika
 
-
     clearValue();
     write(itogo);
 
